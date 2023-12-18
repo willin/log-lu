@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:cloudflare": "turbo build --filter=@loglu/site",
     "dev": "turbo dev",
+    "dev:cloudflare": "turbo dev --filter=@loglu/site",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset:version": "changeset version",
@@ -24,7 +26,10 @@
     "node": ">=18"
   },
   "packageManager": "bun@1.0.18",
-  "workspaces": [],
+  "workspaces": [
+    "examples/*",
+    "core/*"
+  ],
   "lint-staged": {
     "*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx|vue)": [
       "prettier --write"
