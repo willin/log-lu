@@ -1,0 +1,11 @@
+{
+  "extends": ["//"],
+  "pipeline": {
+    "dev": {
+      "dependsOn": ["@loglu/core#build"]
+    },
+    "build": {
+      "output": "dist/**"
+    }
+  }
+}

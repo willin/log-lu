@@ -1,0 +1,50 @@
+{
+  "name": "@loglu/core",
+  "version": "0.0.0",
+  "description": "Core Middleware for log-lu",
+  "author": "Willin Wang <willin@willin.org> (https://willin.wang/)",
+  "keywords": [
+    "log",
+    "hono",
+    "core",
+    "activitypub",
+    "fediverse"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willin/log-lu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willin/log-lu/issues"
+  },
+  "homepage": "https://log.lu",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test"
+  },
+  "peerDependencies": {
+    "hono": "^3.11.7"
+  },
+  "devDependencies": {
+    "hono": "^3.11.7"
+  }
+}
