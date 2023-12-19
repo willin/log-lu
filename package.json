@@ -7,6 +7,7 @@
     "dev": "turbo dev",
     "dev:cloudflare": "turbo dev --filter=@loglu/site",
     "lint": "turbo lint",
+    "test": "bun test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset:version": "changeset version",
     "changeset:release": "changeset publish"
@@ -17,10 +18,12 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@hono/eslint-config": "^0.0.3",
+    "bun-types": "^1.0.18-1",
     "eslint": "^8.54.0",
     "lint-staged": "latest",
     "prettier": "^3.1.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=18"
