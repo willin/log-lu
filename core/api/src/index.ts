@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
-import wellKnown from './.well-known';
-import nodeinfo from './nodeinfo';
+import wellKnown from './routes/.well-known';
+import nodeinfo from './routes/nodeinfo';
 
 const app = new Hono();
 

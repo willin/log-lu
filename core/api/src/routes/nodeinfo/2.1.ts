@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { LOGLU_VERSION } from '../../utils/version';
 
 const nodeinfo21 = new Hono();
 
@@ -7,7 +8,7 @@ nodeinfo21.get('/2.1', (c) => {
     version: '2.0',
     software: {
       name: 'loglu',
-      version: 'VERSION',
+      version: LOGLU_VERSION,
       repository: 'https://github.com/willin/log-lu'
     },
     protocols: ['activitypub'],

@@ -1,11 +1,12 @@
 import { Hono } from 'hono';
+import { LOGLU_VERSION } from '../../utils/version';
 
 const nodeinfo20 = new Hono();
 
 nodeinfo20.get('/2.0', (c) => {
   const resp = {
     version: '2.0',
-    software: { name: 'loglu', version: 'VERSION' },
+    software: { name: 'loglu', version: LOGLU_VERSION },
     protocols: ['activitypub'],
     services: { outbound: [], inbound: [] },
     usage: {

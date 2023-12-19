@@ -5,6 +5,7 @@ const nodeinfo = new Hono();
 nodeinfo.get('/nodeinfo', (c) => {
   const url = new URL(c.req.url);
   const domain = `${url.protocol}//${url.host}`;
+
   const resp = {
     links: [
       {
