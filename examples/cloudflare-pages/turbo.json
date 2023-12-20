@@ -3,11 +3,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["@loglu/api#build"],
-      "output": "dist/**"
+      "outputs": ["dist/**"]
     },
     "dev": {
       "dependsOn": ["@loglu/api#build"],
-      "output": "dist/**"
+      "outputs": ["dist/**"]
     }
   }
 }

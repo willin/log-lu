@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "generate": {
+      "dependsOn": ["^generate"],
+      "outputs": ["migrations/**"]
+    },
     "lint": {
       "dependsOn": ["^lint"]
     },

@@ -5,7 +5,7 @@
       "dependsOn": ["@loglu/core#build"]
     },
     "build": {
-      "output": "dist/**"
+      "outputs": ["dist/**"]
     }
   }
 }
