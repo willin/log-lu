@@ -53,8 +53,8 @@ webfinger.get(
       return c.body(
         toXRD(
           { element: 'Subject', value: subject },
-          ...aliases.map((alias) => ({ element: 'Alias', value: alias })),
-          ...links.map((link) => ({ element: 'Link', attributes: link }))
+          ...(aliases.map((alias) => ({ element: 'Alias', value: alias })) as any),
+          ...(links.map((link) => ({ element: 'Link', attributes: link })) as any)
         )
       );
     }

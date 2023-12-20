@@ -2,11 +2,11 @@
   "extends": ["//"],
   "pipeline": {
     "build": {
-      "dependsOn": ["@loglu/types#build"],
+      "dependsOn": ["@loglu/api#build"],
       "output": "dist/**"
     },
     "dev": {
-      "dependsOn": ["@loglu/types#build"],
+      "dependsOn": ["@loglu/api#build"],
       "output": "dist/**"
     }
   }
