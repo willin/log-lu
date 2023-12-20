@@ -1,5 +1,5 @@
 {
-  "name": "@loglu/adapter-sqlite",
+  "name": "@loglu/schema-sqlite",
   "version": "0.0.0",
   "description": "Core Middleware for log-lu",
   "author": "Willin Wang <willin@willin.org> (https://willin.wang/)",
@@ -43,11 +43,12 @@
     "generate": "drizzle-kit generate:sqlite",
     "test": "bun test"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "drizzle-orm": "^0.29.1"
   },
-  "peerDependencies": {},
   "devDependencies": {
+    "drizzle-orm": "^0.29.1",
     "drizzle-kit": "^0.20.7"
   }
 }

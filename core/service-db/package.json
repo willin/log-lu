@@ -1,12 +1,16 @@
 {
-  "name": "@loglu/types",
+  "name": "@loglu/service-db",
   "version": "0.0.0",
-  "description": "Core Types for log-lu",
+  "description": "Core Middleware for log-lu",
   "author": "Willin Wang <willin@willin.org> (https://willin.wang/)",
   "keywords": [
     "log",
     "hono",
-    "types",
+    "adapter",
+    "handler",
+    "db",
+    "database",
+    "model",
     "activitypub",
     "fediverse"
   ],
@@ -22,10 +26,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "dev": "echo vite dev",
-    "build": "tsc"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -38,12 +38,21 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
-  "dependencies": {},
-  "peerDependencies": {
-    "hono": "^3.11.7"
-  },
-  "devDependencies": {},
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "drizzle-orm": "^0.29.1",
+    "@loglu/schema-sqlite": "*"
+  },
+  "devDependencies": {
+    "@loglu/schema-sqlite": "*",
+    "drizzle-orm": "^0.29.1",
+    "drizzle-kit": "^0.20.7"
+  }
 }

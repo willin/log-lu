@@ -70,16 +70,12 @@
       "indexes": {
         "idx_app_created": {
           "name": "idx_app_created",
-          "columns": [
-            "created_at"
-          ],
+          "columns": ["created_at"],
           "isUnique": false
         },
         "uidx_app_client_id": {
           "name": "uidx_app_client_id",
-          "columns": [
-            "client_id"
-          ],
+          "columns": ["client_id"],
           "isUnique": true
         }
       },

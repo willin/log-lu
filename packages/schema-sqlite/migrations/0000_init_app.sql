@@ -6,7 +6,7 @@ CREATE TABLE `app` (
 	`client_id` text NOT NULL,
 	`client_secret` text NOT NULL,
 	`scopes` text NOT NULL,
-	`created_at` text DEFAULT (STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW')) NOT NULL
+	`created_at` DATETIME DEFAULT (STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW')) NOT NULL
 );
 --> statement-breakpoint
 CREATE INDEX `idx_app_created` ON `app` (`created_at`);--> statement-breakpoint

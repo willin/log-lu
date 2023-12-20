@@ -1,7 +1,7 @@
 import { sql } from 'drizzle-orm';
 import { text, sqliteTable, unique, index } from 'drizzle-orm/sqlite-core';
 
-export const tableApp = sqliteTable(
+export const app = sqliteTable(
   'app',
   {
     id: text('id').primaryKey(),
