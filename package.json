@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "build:cloudflare": "turbo build --filter=@loglu/site",
-    "dev": "turbo dev",
+    "dev": "turbo dev --filter=./examples/*",
     "dev:cloudflare": "turbo dev --filter=@loglu/site",
     "lint": "turbo lint",
     "test": "bun test",

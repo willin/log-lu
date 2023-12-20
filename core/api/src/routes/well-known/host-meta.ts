@@ -6,8 +6,9 @@ const hostMeta = new Hono();
 hostMeta.get('/host-meta', (c) => {
   const url = new URL(c.req.url);
   const domain = `${url.protocol}//${url.host}`;
-
   const accept = c.req.raw.headers.get('accept');
+
+  c.header('Cache-Control', 'max-age=604800, stale-while-revalidate=86400');
   if (accept === jrd) {
     c.header('Content-Type', jrd);
     const resp = {
@@ -39,6 +40,7 @@ hostMeta.get('/host-meta.json', (c) => {
   const url = new URL(c.req.url);
   const domain = `${url.protocol}//${url.host}`;
 
+  c.header('Cache-Control', 'max-age=604800, stale-while-revalidate=86400');
   c.header('Content-Type', jrd);
   const resp = {
     links: [

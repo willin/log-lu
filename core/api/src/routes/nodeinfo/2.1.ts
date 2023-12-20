@@ -4,6 +4,7 @@ import { LOGLU_VERSION } from '../../utils/version';
 const nodeinfo21 = new Hono();
 
 nodeinfo21.get('/2.1', (c) => {
+  c.header('Cache-Control', 'max-age=604800, stale-while-revalidate=86400');
   const resp = {
     version: '2.0',
     software: {
