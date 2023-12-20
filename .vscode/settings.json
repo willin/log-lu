@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["willin"]
+  "cSpell.words": ["willin"],
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.ignoreTsConfigBaseUrl": true,
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false
 }
