@@ -1,4 +1,4 @@
-import { zValidator } from '@hono/zod-validator';
+import { jfValidator } from '@loglu/zod-validator';
 import { Hono } from 'hono';
 import { z } from 'zod';
 
@@ -6,8 +6,7 @@ const appsV1 = new Hono();
 
 appsV1.post(
   '/apps',
-  zValidator(
-    'json',
+  jfValidator(
     z.object({
       client_name: z.string(),
       redirect_uris: z.string(),
@@ -18,7 +17,7 @@ appsV1.post(
       if (!result.success) {
         return c.json(
           {
-            error: `Validation failed: ${result.error.issues.map((x) => x.code).join(',')}`
+            error: `Validation failed: ${result.error.issues.map((x) => x.path).join(',')}`
           },
           400
         );
@@ -26,7 +25,7 @@ appsV1.post(
     }
   ),
   (c) => {
-    const data = c.req.valid('json');
+    const data = c.req.valid('form');
     const resp = {
       id: '1',
       ...data,

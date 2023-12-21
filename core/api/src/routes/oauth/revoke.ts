@@ -1,4 +1,4 @@
-import { zValidator } from '@hono/zod-validator';
+import { jfValidator } from '@loglu/zod-validator';
 import { Hono } from 'hono';
 import { z } from 'zod';
 
@@ -6,8 +6,7 @@ const revoke = new Hono();
 
 revoke.post(
   '/revoke',
-  zValidator(
-    'form',
+  jfValidator(
     z.object({
       client_id: z.string(),
       client_secret: z.string(),

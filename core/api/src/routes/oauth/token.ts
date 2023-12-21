@@ -1,4 +1,4 @@
-import { zValidator } from '@hono/zod-validator';
+import { jfValidator } from '@loglu/zod-validator';
 import { Hono } from 'hono';
 import { z } from 'zod';
 
@@ -6,8 +6,7 @@ const token = new Hono();
 
 token.post(
   '/token',
-  zValidator(
-    'form',
+  jfValidator(
     z.object({
       grant_type: z.string(),
       code: z.string().optional(),
