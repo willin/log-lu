@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "b0e426bb-4c68-4348-afc3-3a0d9832a989",
+  "id": "b4943743-63e7-4cfb-bd51-0779c850f8ac",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "app": {
@@ -13,6 +13,14 @@
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
         },
         "name": {
           "name": "name",
@@ -70,12 +78,23 @@
       "indexes": {
         "idx_app_created": {
           "name": "idx_app_created",
-          "columns": ["created_at"],
+          "columns": [
+            "created_at"
+          ],
+          "isUnique": false
+        },
+        "idx_app_user": {
+          "name": "idx_app_user",
+          "columns": [
+            "user_id"
+          ],
           "isUnique": false
         },
         "uidx_app_client_id": {
           "name": "uidx_app_client_id",
-          "columns": ["client_id"],
+          "columns": [
+            "client_id"
+          ],
           "isUnique": true
         }
       },
