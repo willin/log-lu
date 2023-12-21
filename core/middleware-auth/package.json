@@ -1,12 +1,14 @@
 {
-  "name": "@loglu/core",
+  "name": "@loglu/middleware-auth",
   "version": "0.0.0",
-  "description": "Core Middleware for log-lu",
+  "description": "Auth Middleware for log-lu",
   "author": "Willin Wang <willin@willin.org> (https://willin.wang/)",
   "keywords": [
     "log",
     "hono",
-    "core",
+    "auth",
+    "oauth",
+    "permission",
     "activitypub",
     "fediverse"
   ],

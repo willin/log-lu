@@ -45,14 +45,16 @@
     "build": "tsc",
     "test": "bun test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "drizzle-zod": "^0.5.1"
+  },
   "peerDependencies": {
     "drizzle-orm": "^0.29.1",
     "@loglu/schema-sqlite": "*"
   },
   "devDependencies": {
     "@loglu/schema-sqlite": "*",
-    "drizzle-orm": "^0.29.1",
-    "drizzle-kit": "^0.20.7"
+    "drizzle-kit": "^0.20.7",
+    "drizzle-orm": "^0.29.1"
   }
 }
