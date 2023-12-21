@@ -27,9 +27,9 @@ export const jfValidator =
     const contentType = c.req.header('Content-Type') || '';
     let value = {};
     if (contentType.startsWith('application/json')) {
-      value = await c.req.json();
+      value = await c.req.json().catch(() => ({}));
     } else {
-      value = await c.req.parseBody({ all: true });
+      value = await c.req.parseBody({ all: true }).catch(() => ({}));
     }
     const result = await schema.safeParseAsync(value);
 
